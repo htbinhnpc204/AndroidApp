@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomePageActivity">
+
+    <RelativeLayout
+        android:id="@+id/inforArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_bg_home"
+        android:padding="16dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHeight_percent=".37"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="140dp"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ava" />
+
+        <TextView
+            android:id="@+id/MSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/avatar"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="@color/black"
+            android:text="MSV: 1911505310105"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/MSV"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="@color/black"
+            android:text="Họ tên: Hồ Thái Bình"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="@color/black"
+            android:text="Ngày sinh: 20/04/2001"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/khoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dob"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="@color/black"
+            android:text="Khoa: Điện - Điện tử"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/khoa"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="@color/black"
+            android:text="Lớp: 19T1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/nganh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lop"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:textColor="@color/black"
+            android:text="Ngành: Công nghệ thông tin"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_btn_bg"
+            android:onClick="logout_Click"
+            android:text="Đăng xuất"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_info_edit" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintTop_toBottomOf="@id/inforArea"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_tkb"
+            android:onClick="tkb_Click"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/img_lichthi"
+            android:onClick="lichThi_Click"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_ketqua"
+            android:onClick="ketQua_Click"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="10dp"
+            android:src="@drawable/img_notice"
+            android:onClick="thongBao_Click"/>
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/stroke"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintHeight_percent=".07"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.tabs.TabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

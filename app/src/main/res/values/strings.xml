@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sinh viên UTE</string>
+    <string name="login">Đăng nhập</string>
+    <string name="forgot_password">Quên mật khẩu</string>
+</resources>

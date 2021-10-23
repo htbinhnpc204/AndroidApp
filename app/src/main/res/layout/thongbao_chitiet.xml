@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_left" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/img_notice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="THÔNG BÁO TỪ LỚP HỌC PHẦN"
+            android:textAlignment="center"
+            android:textColor="#03A9F4"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lophocphan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:text="Lớp Học Phần "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+        android:id="@+id/hocphan1"
+        android:background="#03A9F4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="80dp"
+        android:text="121CNX05 "
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/hocphan2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:background="#03A9F4"
+        android:id="@+id/hocphan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="80dp"
+        android:text="121CNX04 "
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/lophocphan"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ngay"
+        android:layout_width="70dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="120dp"
+        android:text="Ngày nhận "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/lophocphan"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ngaynhan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="120dp"
+        android:text="10/09/2021 "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/ngay"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/noidung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="Nội dung "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/ngay"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/motachitiet"
+        android:layout_width="250dp"
+        android:layout_height="338dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="180dp"
+        android:text="Thầy đã tạo nhóm lớp MS Teams theo tên nhóm lớp và đã thêm thành viên nhóm. Sinh viên nào có thay đổi bổ sung hoặc chưa là thành viên nhóm lớp thì hãy liên hệ thầy qua kênh zalo sau:
+1. LINK lớp 121CNX01: https://zalo.me/g/qglmnu706
+2. LINK 121CNX02: https://zalo.me/g/pqechc193
+3. Link lớp Lập trình web nâng cao 1:
+https://zalo.me/g/hcqwqs952
+4. Link lớp Lập trình web nâng cao 2:
+https://zalo.me/g/aqnpcc408
+5. Thực hành xml: https://zalo.me/g/ndmohm242
+hoặc số điện thoại 0905710048; email:nlquan@vku.udn.vn "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/noidung"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
