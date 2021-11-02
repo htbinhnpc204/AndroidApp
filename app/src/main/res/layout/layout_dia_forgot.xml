@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/dia_white_corn_16">
+    android:background="@drawable/dia_white_corn_16"
+    android:layout_margin="16dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/dia_bg"
-        android:padding="16dp">
+        android:background="@drawable/dia_bg">
 
         <ImageButton
             android:id="@+id/btnClose"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_margin="16dp"
             android:layout_alignParentRight="true"
             android:onClick="Close"
             android:src="@drawable/img_close_x" />
@@ -78,10 +79,10 @@
             android:layout_height="40dp"
             android:layout_below="@+id/input_arena"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginVertical="20dp"
             android:background="@drawable/ic_btn_bg"
             android:text="Gửi yêu cầu"
             android:textColor="@color/white" />
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

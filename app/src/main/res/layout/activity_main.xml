@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,32 +8,40 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.utils.widget.ImageFilterView
+    <ImageView
         android:id="@+id/logo"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@+id/name"
-        android:layout_marginBottom="40dp"
-        android:src="@drawable/img_logo" />
+        android:src="@drawable/img_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".2" />
 
     <RelativeLayout
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/login_arena"
-        android:layout_centerHorizontal="true">
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintStart_toStartOf="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0">
 
         <ImageView
             android:id="@+id/human_logo"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/img_human"/>
+            android:src="@drawable/img_human" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/human_logo"
             android:text="ĐĂNG NHẬP HỆ THỐNG"
             android:textColor="@color/main_color"
@@ -42,96 +50,115 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/login_arena"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintWidth_percent=".8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0">
 
         <EditText
-            android:id="@+id/txtUser"
-            android:layout_width="220dp"
+            android:id="@+id/edUser"
+            android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_edit_text"
             android:paddingHorizontal="10dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/ic_edit_text" />
+            app:layout_constraintBottom_toBottomOf="@+id/txtUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtUser"
+            app:layout_constraintTop_toTopOf="@+id/txtUser" />
 
         <EditText
-            android:id="@+id/txtPass"
-            android:layout_width="220dp"
+            android:id="@+id/edPass"
+            android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_below="@+id/txtUser"
-            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_edit_text"
             android:paddingHorizontal="10dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/ic_edit_text" />
+            app:layout_constraintBottom_toBottomOf="@+id/txtPass"
+            app:layout_constraintEnd_toEndOf="@+id/edUser"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edUser"
+            app:layout_constraintTop_toTopOf="@+id/txtPass" />
 
         <TextView
+            android:id="@+id/txtUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="6dp"
             android:text="Mã sinh viên:"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias=".1"
+            app:layout_constraintVertical_bias=".2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/txtPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/txtPass"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="6dp"
             android:text="Mật khẩu:"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/txtUser"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/txtUser"
+            app:layout_constraintTop_toBottomOf="@id/txtUser" />
 
         <CheckBox
             android:id="@+id/cbSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtPass"
-            android:layout_alignLeft="@+id/txtPass"
-            android:layout_marginTop="10dp"
-            android:buttonTint="@color/stroke" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtPass"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/cbSave"
-            android:text="Lưu thông tin"
+            android:buttonTint="@color/main_color"
             android:textColor="@color/white"
-            android:textSize="18sp" />
-    </RelativeLayout>
+            android:text="Nhớ mật khẩu"
+            app:layout_constraintStart_toStartOf="@+id/edPass"
+            app:layout_constraintTop_toBottomOf="@+id/edPass" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/button"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/login_arena"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp">
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/login_arena"
+        app:layout_constraintStart_toStartOf="@+id/login_arena"
+        app:layout_constraintTop_toBottomOf="@+id/login_arena">
 
         <Button
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_weight="1"
             android:background="@drawable/ic_btn_bg"
             android:onClick="doForgot"
             android:text="@string/forgot_password"
             android:textColor="@color/white" />
 
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
         <Button
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
+            android:layout_weight="1"
             android:background="@drawable/ic_btn_bg"
-            android:text="@string/login"
             android:onClick="doLogin"
+            android:text="@string/login"
             android:textColor="@color/white" />
-    </RelativeLayout>
+    </LinearLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
