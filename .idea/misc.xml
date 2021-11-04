@@ -19,6 +19,7 @@
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/unchecked.xml" value="0.2203125" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/font/arbutus.xml" value="0.1265625" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_card_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_chi_tiet_thong_bao.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_ket_qua.xml" value="0.25" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_ketqua.xml" value="0.33" />
@@ -29,9 +30,11 @@
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_test.xml" value="0.33" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_thong_bao.xml" value="0.18" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/content_chi_tiet_thong_bao.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/custom_dialog.xml" value="0.2" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/dialog_forgot.xml" value="0.33" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/fragment_day.xml" value="0.25" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/fragment_tkb_by_day.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/fragment_week.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/ketqua_item.xml" value="0.33" />

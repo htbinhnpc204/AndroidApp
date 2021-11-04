@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -50,21 +52,24 @@ public class TkbOfDayAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
         view = inflater.inflate(layout, null);
+
         TkbModel LICHHOC = arraylist.get(i);
-            //ánh xạ
-            TextView monhoc = view.findViewById(R.id.textview_MonHoc);
-            TextView tiet = view.findViewById(R.id.textview_Tiet);
-            TextView gv = view.findViewById(R.id.textview_Gv);
-            TextView phong = view.findViewById(R.id.textview_Phong);
+        //ánh xạ
+        TextView monhoc = view.findViewById(R.id.textview_MonHoc);
+        TextView tiet = view.findViewById(R.id.textview_Tiet);
+        TextView gv = view.findViewById(R.id.textview_Gv);
+        TextView phong = view.findViewById(R.id.textview_Phong);
 
-            monhoc.setText("Môn: " + LICHHOC.getMonhoc());
-            tiet.setText("Tiết: " + LICHHOC.getTiet());
-            gv.setText("Giảng viên: " + LICHHOC.getGv());
-            phong.setText("Phòng: " + LICHHOC.getPhong());
+        monhoc.setText("Môn: " + LICHHOC.getMonhoc());
+        tiet.setText("Tiết: " + LICHHOC.getTiet());
+        gv.setText("Giảng viên: " + LICHHOC.getGv());
+        phong.setText("Phòng: " + LICHHOC.getPhong());
 
-            return view;
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.left_slide);
+        view.startAnimation(anim);
+
+        return view;
     }
-
 
 
 }

@@ -9,9 +9,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
-import com.htbinh.studentapp.Adapter.TkbAdapter;
 import com.htbinh.studentapp.Adapter.TkbOfDayAdapter;
 import com.htbinh.studentapp.Model.TkbModel;
 import com.htbinh.studentapp.R;
@@ -85,7 +83,7 @@ public class DayFragment extends ListFragment {
             }
         }
 
-        adapter = new TkbOfDayAdapter(getActivity(), R.layout.tkb_day_item, tmp);
+        adapter = new TkbOfDayAdapter(getActivity(), R.layout.item_tkb_by_day, tmp);
         setListAdapter(adapter);
 
         return inflater.inflate(R.layout.fragment_day, container, false);

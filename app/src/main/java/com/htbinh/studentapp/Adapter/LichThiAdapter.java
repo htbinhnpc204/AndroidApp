@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -45,6 +47,7 @@ public class LichThiAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
         view = inflater.inflate(layout, null);
+
         LichThiModel lichthi = arraylist.get(i);
 
         //ánh xạ
@@ -62,6 +65,8 @@ public class LichThiAdapter extends BaseAdapter {
         giothi.setText(lichthi.getGiothi());
         phongthi.setText(lichthi.getPhongthi());
 
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.left_slide);
+        view.startAnimation(anim);
 
         return view;
     }

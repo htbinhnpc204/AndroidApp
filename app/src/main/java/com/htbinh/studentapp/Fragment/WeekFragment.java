@@ -10,12 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.htbinh.studentapp.Adapter.TkbAdapter;
-import com.htbinh.studentapp.Adapter.TkbOfDayAdapter;
 import com.htbinh.studentapp.Model.TkbModel;
 import com.htbinh.studentapp.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,7 +79,7 @@ public class WeekFragment extends ListFragment {
         listTKB.add(new TkbModel("13/11/2021","Lập trình di động 8","7-9","Đỗ Phú Huy","ONLINE"));
 
 
-        adapter = new TkbAdapter(getActivity(), R.layout.tkb_item, listTKB);
+        adapter = new TkbAdapter(getActivity(), R.layout.item_tkb_by_week, listTKB);
         setListAdapter(adapter);
 
         // Inflate the layout for this fragment

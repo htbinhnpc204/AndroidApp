@@ -32,7 +32,7 @@ public class LichThiActivity extends AppCompatActivity {
         arraylist.add(new LichThiModel("NGÀY THI: 24/07/2021","TÊN LỚP HP: 220VKT01","TÊN HP: Vẽ kỹ thuật","GIẢNG VIÊN: Nguyễn Đức Sỹ","GIỜ THI: 13h00","ONLINE"));
         arraylist.add(new LichThiModel("NGÀY THI: 24/07/2021","TÊN LỚP HP: 220VKT01","TÊN HP: Vẽ kỹ thuật","GIẢNG VIÊN: Nguyễn Đức Sỹ","GIỜ THI: 13h00","ONLINE"));
 
-        adapter = new LichThiAdapter(LichThiActivity.this,R.layout.lichthi_item,arraylist);
+        adapter = new LichThiAdapter(LichThiActivity.this,R.layout.item_lichthi,arraylist);
         List.setAdapter(adapter);
     }
     public void goBack(View v){

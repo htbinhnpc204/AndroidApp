@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -56,6 +58,9 @@ public class KetquaAdapter extends BaseAdapter {
         txthocky.setText((ketqua.getDiemtbhk()));
         txthocbong.setText((ketqua.getDiemtbhb()));
         txtxeploai.setText((ketqua.getXeploai()));
+
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.left_slide);
+        view.startAnimation(anim);
 
         return view;
     }

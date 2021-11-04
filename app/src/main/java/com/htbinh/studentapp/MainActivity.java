@@ -1,26 +1,26 @@
 package com.htbinh.studentapp;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.htbinh.studentapp.Activity.HomePageActivity;
 
@@ -28,6 +28,31 @@ public class MainActivity extends AppCompatActivity {
     Dialog dialog;
     EditText tk, mk;
     CheckBox rememberMeCheck;
+    ImageView appLogo;
+    RelativeLayout appName;
+    ConstraintLayout loginArea;
+    LinearLayout buttons;
+
+    Animation topAnimation;
+
+    private void Mapping(){
+        tk = findViewById(R.id.edUser);
+        mk = findViewById(R.id.edPass);
+        rememberMeCheck = findViewById(R.id.cbSave);
+
+        appLogo = findViewById(R.id.appLogo);
+        appName = findViewById(R.id.appName);
+        loginArea = findViewById(R.id.loginArea);
+        buttons = findViewById(R.id.buttonArea);
+
+        topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+
+        appLogo.startAnimation(topAnimation);
+        appName.startAnimation(topAnimation);
+        loginArea.startAnimation(topAnimation);
+        buttons.startAnimation(topAnimation);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,11 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void Mapping(){
-        tk = findViewById(R.id.edUser);
-        mk = findViewById(R.id.edPass);
-        rememberMeCheck = findViewById(R.id.cbSave);
-    }
+
 
     public void doForgot(View v){
         openDialog();
@@ -76,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     private void openDialog(){
         dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.layout_dia_forgot);
+        dialog.setContentView(R.layout.dia_forgot);
 
         Window window = dialog.getWindow();
 
@@ -104,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
     private void goToHome(){
         Intent in = new Intent(MainActivity.this, HomePageActivity.class);
         startActivity(in);
+        this.finish();
     }
 
     public void doLogin(View v){

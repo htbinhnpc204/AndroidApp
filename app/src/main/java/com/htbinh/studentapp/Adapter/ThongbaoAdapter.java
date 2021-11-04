@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -47,16 +49,19 @@ public class ThongbaoAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         view = inflater.inflate(layout,null);
+
         //ánh xạ vỉew
         TextView txtTen = (TextView)  view.findViewById(R.id.textviewTen);
         TextView txtMoTa = (TextView) view.findViewById(R.id.textviewMoTa);
-        ImageView imgHinh = (ImageView) view.findViewById(R.id.imageviewHinh);
 
         // gán giá trị
         ThongbaoModel thongbao = thongbaoList.get(i);
 
         txtTen.setText((thongbao.getTen()));
         txtMoTa.setText(thongbao.getMoTa());
+
+        Animation anim = AnimationUtils.loadAnimation(context, R.anim.left_slide);
+        view.startAnimation(anim);
 
         return view;
     }

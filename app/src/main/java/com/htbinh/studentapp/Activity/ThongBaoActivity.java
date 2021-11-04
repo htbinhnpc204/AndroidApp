@@ -2,8 +2,10 @@ package com.htbinh.studentapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.htbinh.studentapp.R;
@@ -17,6 +19,7 @@ public class ThongBaoActivity extends AppCompatActivity {
     ListView lvThongbao;
     ArrayList<ThongbaoModel> arrayThongbao;
     ThongbaoAdapter adapter;
+    ImageView btnXemThem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +37,19 @@ public class ThongBaoActivity extends AppCompatActivity {
                 "Thông báo đến lớp học phần: 121TCNX04, 121TCNX05- Ngày: 17/09/2021"));
         arrayThongbao.add(new ThongbaoModel("Ngô Lê Quân",
                 "Thông báo đến lớp học phần: 121TCNX04, 121TCNX05- Ngày: 17/09/2021"));
-        adapter = new ThongbaoAdapter(this, R.layout.thongbao_item,arrayThongbao);
+        adapter = new ThongbaoAdapter(this, R.layout.item_thongbao,arrayThongbao);
         lvThongbao.setAdapter(adapter);
 
     }
+
     private void Anhxa(){
+        btnXemThem = findViewById(R.id.btnXemThem);
         lvThongbao = (ListView) findViewById(R.id.listviewthongbao);
     }
 
     public void viewAll(View v){
-        setContentView(R.layout.thongbao_chitiet);
+        Intent in = new Intent(ThongBaoActivity.this, ChiTietThongBaoActivity.class);
+        startActivity(in);
     }
 
     public void goBack(View v){

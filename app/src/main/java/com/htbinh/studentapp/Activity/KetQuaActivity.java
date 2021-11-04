@@ -28,7 +28,7 @@ public class KetQuaActivity extends AppCompatActivity {
         arrayKetqua.add(new KetquaModel(" 1 - Năm học 2021-2022", "24","8","3","Gioi"));
         arrayKetqua.add(new KetquaModel(" 1 - Năm học 2021-2022", "20","10","4","xuat sac"));
         arrayKetqua.add(new KetquaModel(" 1 - Năm học 2021-2022", "21","6.5","2.3","Binh thuong"));
-        adapter = new KetquaAdapter(this, R.layout.ketqua_item,arrayKetqua);
+        adapter = new KetquaAdapter(this, R.layout.item_ketqua,arrayKetqua);
         lvKetqua.setAdapter(adapter);
     }
     private void Anhxa() {

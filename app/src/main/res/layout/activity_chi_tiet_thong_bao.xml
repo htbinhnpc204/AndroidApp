@@ -18,7 +18,8 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/img_arrow_left" />
+            android:src="@drawable/img_arrow_left"
+            android:onClick="goBack"/>
 
         <ImageView
             android:layout_width="30dp"
@@ -118,14 +119,14 @@
         android:layout_marginStart="108dp"
         android:layout_marginTop="180dp"
         android:text="Thầy đã tạo nhóm lớp MS Teams theo tên nhóm lớp và đã thêm thành viên nhóm. Sinh viên nào có thay đổi bổ sung hoặc chưa là thành viên nhóm lớp thì hãy liên hệ thầy qua kênh zalo sau:
-1. LINK lớp 121CNX01: https://zalo.me/g/qglmnu706
-2. LINK 121CNX02: https://zalo.me/g/pqechc193
-3. Link lớp Lập trình web nâng cao 1:
-https://zalo.me/g/hcqwqs952
-4. Link lớp Lập trình web nâng cao 2:
-https://zalo.me/g/aqnpcc408
-5. Thực hành xml: https://zalo.me/g/ndmohm242
-hoặc số điện thoại 0905710048; email:nlquan@vku.udn.vn "
+                        1. LINK lớp 121CNX01: https://zalo.me/g/qglmnu706
+                        2. LINK 121CNX02: https://zalo.me/g/pqechc193
+                        3. Link lớp Lập trình web nâng cao 1:
+                        https://zalo.me/g/hcqwqs952
+                        4. Link lớp Lập trình web nâng cao 2:
+                        https://zalo.me/g/aqnpcc408
+                        5. Thực hành xml: https://zalo.me/g/ndmohm242
+                        hoặc số điện thoại 0905710048; email:nlquan@vku.udn.vn "
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/noidung"
         app:layout_constraintTop_toTopOf="@+id/linearLayout"
