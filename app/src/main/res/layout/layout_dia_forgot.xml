@@ -1,88 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/dia_white_corn_16"
+    android:background="@drawable/ic_bg_glass"
     android:layout_margin="16dp">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/dia_bg">
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:id="@+id/btnClose"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_margin="16dp"
-            android:layout_alignParentRight="true"
             android:onClick="Close"
-            android:src="@drawable/img_close_x" />
+            android:src="@drawable/img_close_x"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/txtDia"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/btnClose"
             android:text="QUÊN MẬT KHẨU"
             android:textColor="@color/main_color"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnClose" />
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/input_arena"
-            android:layout_width="320dp"
-            android:layout_height="100dp"
-            android:layout_below="@id/txtDia"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="20dp">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent=".8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDia"
+            app:layout_constraintVertical_bias="0">
 
             <EditText
-                android:id="@+id/txtUser"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/ic_edit_text" />
+                android:id="@+id/forgotEditTextUser"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_edit_text"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtUser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtUser"
+                app:layout_constraintTop_toTopOf="@+id/txtUser" />
 
             <EditText
-                android:id="@+id/txtPass"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_below="@+id/txtUser"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/ic_edit_text" />
+                android:id="@+id/forgotEditTextPass"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ic_edit_text"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/forgotEditTextUser"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/forgotEditTextUser"
+                app:layout_constraintTop_toBottomOf="@+id/forgotEditTextUser" />
 
             <TextView
+                android:id="@+id/txtUser"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="6dp"
                 android:text="Mã sinh viên:"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintVertical_bias=".2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/txtEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/txtPass"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="6dp"
-                android:text="Mật khẩu:"
+                android:text="Email:"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
-        </RelativeLayout>
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/txtUser"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/txtUser"
+                app:layout_constraintTop_toBottomOf="@+id/forgotEditTextUser" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="40dp"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
             android:layout_below="@+id/input_arena"
-            android:layout_centerHorizontal="true"
-            android:layout_marginVertical="20dp"
+            android:layout_marginVertical="16dp"
             android:background="@drawable/ic_btn_bg"
             android:text="Gửi yêu cầu"
-            android:textColor="@color/white" />
-    </RelativeLayout>
+            android:textColor="@color/white"
+            app:layout_constraintWidth_percent=".4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_arena" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

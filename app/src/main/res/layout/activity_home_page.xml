@@ -1,262 +1,302 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.HomePageActivity">
 
-    <RelativeLayout
-        android:id="@+id/inforArea"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/ic_bg_home">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/ic_bg_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
 
         <ImageView
             android:id="@+id/avatar"
-            android:layout_width="140dp"
-            android:layout_height="170dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginHorizontal="20dp"
-            android:src="@drawable/ava" />
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_avatar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".7"
+            app:layout_constraintHorizontal_bias=".1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".15"
+            app:layout_constraintWidth_percent=".35" />
 
         <TextView
             android:id="@+id/MSV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/avatar"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/avatar"
-            android:fontFamily="@font/myfont"
             android:text="MSV: 1911505310105"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".15"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="@+id/avatar"
+            app:layout_constraintVertical_bias="0" />
 
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/MSV"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/avatar"
-            android:fontFamily="@font/myfont"
             android:text="Họ tên: Hồ Thái Bình"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/dob"
+            app:layout_constraintEnd_toEndOf="@+id/MSV"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/MSV"
+            app:layout_constraintTop_toBottomOf="@+id/MSV"
+            app:layout_constraintVertical_bias="0" />
 
         <TextView
             android:id="@+id/dob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/name"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/avatar"
-            android:fontFamily="@font/myfont"
-            android:textColor="@color/black"
             android:text="Ngày sinh: 20/04/2001"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/lop"
+            app:layout_constraintEnd_toEndOf="@+id/MSV"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/MSV"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintVertical_bias="0" />
 
         <TextView
             android:id="@+id/khoa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dob"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/avatar"
-            android:fontFamily="@font/myfont"
-            android:textColor="@color/black"
             android:text="Khoa: Điện - Điện tử"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/nganh"
+            app:layout_constraintEnd_toEndOf="@+id/MSV"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/MSV"
+            app:layout_constraintTop_toBottomOf="@+id/lop"
+            app:layout_constraintVertical_bias="0" />
 
         <TextView
             android:id="@+id/lop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/khoa"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/avatar"
-            android:fontFamily="@font/myfont"
-            android:textColor="@color/black"
             android:text="Lớp: 19T1"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/khoa"
+            app:layout_constraintEnd_toEndOf="@+id/MSV"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/MSV"
+            app:layout_constraintTop_toBottomOf="@+id/dob"
+            app:layout_constraintVertical_bias="0" />
 
         <TextView
             android:id="@+id/nganh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lop"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@+id/avatar"
-            android:fontFamily="@font/myfont"
-            android:textColor="@color/black"
             android:text="Ngành: Công nghệ thông tin"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            app:layout_constraintEnd_toEndOf="@+id/MSV"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/MSV"
+            app:layout_constraintTop_toTopOf="@+id/avatar"
+            app:layout_constraintVertical_bias="1" />
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:layout_below="@+id/avatar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginVertical="16dp"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
             android:background="@drawable/ic_btn_bg"
             android:onClick="logout_Click"
             android:text="Đăng xuất"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nganh"
+            app:layout_constraintWidth_percent=".4" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="16dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/img_info_edit" />
-    </RelativeLayout>
-        <GridLayout
-            android:layout_width="match_parent"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoArea">
+
+        <Space
+            android:id="@+id/spacer"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTKB"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_below="@+id/inforArea"
-            android:padding="16dp"
-            android:columnCount="2"
-            android:rowCount="2">
+            android:layout_margin="6dp"
+            android:onClick="tkb_Click"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/spacer"
+            app:layout_constraintEnd_toStartOf="@+id/spacer"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:layout_margin="12dp"
-                android:onClick="tkb_Click"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/img_tkb" />
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/img_tkb" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Thời khóa biểu"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Thời khóa biểu"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="16dp"
-                        android:textSize="18dp" />
+            </LinearLayout>
 
-                </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardLichThi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:onClick="lichThi_Click"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/spacer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/spacer">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:layout_margin="12dp"
-                android:onClick="lichThi_Click"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/img_lichthi" />
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/img_lichthi" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Lịch thi"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lịch thi"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="16dp"
-                        android:textSize="18dp" />
+            </LinearLayout>
 
-                </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardKQ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:onClick="ketQua_Click"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/spacer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spacer">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:layout_margin="12dp"
-                android:onClick="ketQua_Click"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/img_ketqua" />
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/img_ketqua" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Kết quả học tập"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Kết quả học tập"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="16dp"
-                        android:textSize="18dp"/>
+            </LinearLayout>
 
-                </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="6dp"
+            android:onClick="thongBao_Click"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spacer"
+            app:layout_constraintTop_toBottomOf="@+id/spacer">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_gravity="fill"
-                android:layout_margin="12dp"
-                android:onClick="thongBao_Click"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/img_notice" />
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginHorizontal="10dp"
-                        android:src="@drawable/img_notice" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Thông báo"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Thông báo"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="16dp"
-                        android:textSize="18dp" />
+            </LinearLayout>
 
-                </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-            </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </GridLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

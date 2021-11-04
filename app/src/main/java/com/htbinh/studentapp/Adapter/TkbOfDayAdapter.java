@@ -1,6 +1,7 @@
 package com.htbinh.studentapp.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,15 +11,19 @@ import android.widget.TextView;
 import com.htbinh.studentapp.R;
 import com.htbinh.studentapp.Model.TkbModel;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
-public class TkbAdapter extends BaseAdapter {
+public class TkbOfDayAdapter extends BaseAdapter {
 
     private Context context;
     private int layout;
     private List<TkbModel> arraylist;
 
-    public TkbAdapter(Context context, int layout, List<TkbModel> arraylist) {
+    public TkbOfDayAdapter(Context context, int layout, List<TkbModel> arraylist) {
         this.context = context;
         this.layout = layout;
         this.arraylist = arraylist;
@@ -46,22 +51,20 @@ public class TkbAdapter extends BaseAdapter {
 
         view = inflater.inflate(layout, null);
         TkbModel LICHHOC = arraylist.get(i);
+            //ánh xạ
+            TextView monhoc = view.findViewById(R.id.textview_MonHoc);
+            TextView tiet = view.findViewById(R.id.textview_Tiet);
+            TextView gv = view.findViewById(R.id.textview_Gv);
+            TextView phong = view.findViewById(R.id.textview_Phong);
 
-        //ánh xạ
-        TextView ngay = view.findViewById(R.id.textview_ngay);
-        TextView monhoc = view.findViewById(R.id.textview_monhoc);
-        TextView tiet = view.findViewById(R.id.textview_tiet);
-        TextView gv = view.findViewById(R.id.textview_gv);
-        TextView phong = view.findViewById(R.id.textview_phong);
+            monhoc.setText("Môn: " + LICHHOC.getMonhoc());
+            tiet.setText("Tiết: " + LICHHOC.getTiet());
+            gv.setText("Giảng viên: " + LICHHOC.getGv());
+            phong.setText("Phòng: " + LICHHOC.getPhong());
 
-        ngay.setText("Ngày: " + LICHHOC.getNgay());
-        monhoc.setText("Môn: " + LICHHOC.getMonhoc());
-        tiet.setText("Tiết: " + LICHHOC.getTiet());
-        gv.setText("Giảng viên: " + LICHHOC.getGv());
-        phong.setText("Phòng: " + LICHHOC.getPhong());
-
-        return view;
+            return view;
     }
+
 
 
 }

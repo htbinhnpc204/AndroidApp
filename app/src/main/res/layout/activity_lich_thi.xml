@@ -21,7 +21,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/arrow_left"
+            android:src="@drawable/img_arrow_left"
             app:tint="@null"
             android:onClick="goBack"/>
 
@@ -32,7 +32,7 @@
             android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/logo_back"
             android:layout_centerVertical="true"
-            android:src="@drawable/logo"
+            android:src="@drawable/img_tkb"
             app:tint="@null"/>
 
         <TextView

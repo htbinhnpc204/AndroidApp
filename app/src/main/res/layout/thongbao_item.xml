@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
-    android:background="@drawable/cart_bg">
+    android:background="@drawable/ic_bg_card">
 
     <TextView
         android:id="@+id/textviewtieude"

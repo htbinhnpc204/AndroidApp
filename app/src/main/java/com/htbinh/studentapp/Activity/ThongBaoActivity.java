@@ -22,6 +22,7 @@ public class ThongBaoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thong_bao);
+
         Anhxa();
         arrayThongbao = new ArrayList<>();
         arrayThongbao.add(new ThongbaoModel("Ngô Lê Quân",
