@@ -1,6 +1,7 @@
 package com.htbinh.studentapp.Adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,10 @@ import android.widget.TextView;
 import com.htbinh.studentapp.R;
 import com.htbinh.studentapp.Model.TkbModel;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class TkbAdapter extends BaseAdapter {
@@ -56,8 +61,8 @@ public class TkbAdapter extends BaseAdapter {
         TextView gv = view.findViewById(R.id.textview_gv);
         TextView phong = view.findViewById(R.id.textview_phong);
 
-        ngay.setText("Ngày: " + LICHHOC.getNgay());
-        monhoc.setText("Môn: " + LICHHOC.getMonhoc());
+        ngay.setText("Môn: " + LICHHOC.getMonhoc());
+        monhoc.setText(getThu(getDayOfWeek(LICHHOC.getNgay())));
         tiet.setText("Tiết: " + LICHHOC.getTiet());
         gv.setText("Giảng viên: " + LICHHOC.getGv());
         phong.setText("Phòng: " + LICHHOC.getPhong());
@@ -68,6 +73,29 @@ public class TkbAdapter extends BaseAdapter {
         return view;
     }
 
+    private String getThu(int date){
+        switch (date){
+            case 1: return "Chủ nhật";
+            case 2: return "Thứ 2";
+            case 3: return "Thứ 3";
+            case 4: return "Thứ 4";
+            case 5: return "Thứ 5";
+            case 6: return "Thứ 6";
+            case 7: return "Thứ 7";
+            default: return "None";
+        }
+    }
 
+    private int getDayOfWeek(String sDate){
+        Calendar c = Calendar.getInstance();
+        Date myDate = null;
+        try {
+            myDate = new SimpleDateFormat("dd/MM/yyyy").parse(sDate);
+        } catch (ParseException e) {
+            Log.i("Date format","Date format error!" + sDate);
+        }
+        c.setTime(myDate);
+        return c.get(Calendar.DAY_OF_WEEK);
+    }
 }
 

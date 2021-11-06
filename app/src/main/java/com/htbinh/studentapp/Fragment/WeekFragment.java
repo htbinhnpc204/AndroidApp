@@ -69,15 +69,14 @@ public class WeekFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         listTKB = new ArrayList<>();
-        listTKB.add(new TkbModel("06/11/2021","Lập trình di động 1","7-9","Đỗ Phú Huy","ONLINE"));
-        listTKB.add(new TkbModel("07/11/2021","Lập trình di động 2","7-9","Đỗ Phú Huy","ONLINE"));
-        listTKB.add(new TkbModel("08/11/2021","Lập trình di động 3","7-9","Đỗ Phú Huy","ONLINE"));
-        listTKB.add(new TkbModel("09/11/2021","Lập trình di động 4","7-9","Đỗ Phú Huy","ONLINE"));
-        listTKB.add(new TkbModel("10/11/2021","Lập trình di động 5","7-9","Đỗ Phú Huy","ONLINE"));
-        listTKB.add(new TkbModel("11/11/2021","Lập trình di động 6","7-9","Đỗ Phú Huy","ONLINE"));
-        listTKB.add(new TkbModel("12/11/2021","Lập trình di động 7 ","7-9","Đỗ Phú Huy","ONLINE"));
-        listTKB.add(new TkbModel("13/11/2021","Lập trình di động 8","7-9","Đỗ Phú Huy","ONLINE"));
-
+        listTKB.add(new TkbModel("08/11/2021","Lập trình di động 1","7-9","Đỗ Phú Huy","ONLINE"));
+        listTKB.add(new TkbModel("09/11/2021","Lập trình di động 2","7-9","Đỗ Phú Huy","ONLINE"));
+        listTKB.add(new TkbModel("10/11/2021","Lập trình di động 3","7-9","Đỗ Phú Huy","ONLINE"));
+        listTKB.add(new TkbModel("11/11/2021","Lập trình di động 4","7-9","Đỗ Phú Huy","ONLINE"));
+        listTKB.add(new TkbModel("12/11/2021","Lập trình di động 5","7-9","Đỗ Phú Huy","ONLINE"));
+        listTKB.add(new TkbModel("13/11/2021","Lập trình di động 6","7-9","Đỗ Phú Huy","ONLINE"));
+        listTKB.add(new TkbModel("13/11/2021","Lập trình di động 7","7-9","Đỗ Phú Huy","ONLINE"));
+        listTKB.add(new TkbModel("14/11/2021","Lập trình di động 8","7-9","Đỗ Phú Huy","ONLINE"));
 
         adapter = new TkbAdapter(getActivity(), R.layout.item_tkb_by_week, listTKB);
         setListAdapter(adapter);

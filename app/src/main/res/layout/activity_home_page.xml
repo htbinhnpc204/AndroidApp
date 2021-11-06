@@ -225,7 +225,7 @@
                     android:layout_height="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Lịch thi"
-                    android:textColor="@color/black"
+                    android:textColor="@color/main_color"
                     android:textSize="16sp" />
 
             </LinearLayout>
@@ -262,7 +262,7 @@
                     android:layout_height="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Kết quả học tập"
-                    android:textColor="@color/black"
+                    android:textColor="@color/main_color"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -300,7 +300,7 @@
                     android:layout_height="24dp"
                     android:layout_marginTop="16dp"
                     android:text="Thông báo"
-                    android:textColor="@color/black"
+                    android:textColor="@color/main_color"
                     android:textSize="16sp" />
 
             </LinearLayout>

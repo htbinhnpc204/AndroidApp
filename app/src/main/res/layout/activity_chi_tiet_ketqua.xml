@@ -47,11 +47,6 @@
         android:id="@+id/lvChitietketqua"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"
-        tools:ignore="NotSibling" />
-
-
+        android:layout_below="@+id/tieude"
+        android:divider="@android:color/transparent" />
 </RelativeLayout>

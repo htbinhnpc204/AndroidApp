@@ -7,6 +7,8 @@
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/checkbox_bg.xml" value="0.1125" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/dia_bg.xml" value="0.2203125" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/dia_white_corn_16.xml" value="0.2203125" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/ic_bg_card.xml" value="0.2203125" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/ic_bg_checkbox.xml" value="0.2203125" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/ic_bg_home.xml" value="0.2203125" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/ic_bg_tkbcardname.xml" value="0.2203125" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/ic_bg_tt.xml" value="0.1125" />
@@ -19,8 +21,9 @@
         <entry key="..\:/Android/StudentApp/app/src/main/res/drawable/unchecked.xml" value="0.2203125" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/font/arbutus.xml" value="0.1265625" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_card_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_chi_tiet_ketqua.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_chi_tiet_thong_bao.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_home_page.xml" value="0.25" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_home_page.xml" value="0.5" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_ket_qua.xml" value="0.25" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_ketqua.xml" value="0.33" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/activity_lich_thi.xml" value="0.25" />
@@ -37,6 +40,8 @@
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/fragment_first.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/fragment_tkb_by_day.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/fragment_week.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/item_chitiet_ketqua.xml" value="0.38461538461538464" />
+        <entry key="..\:/Android/StudentApp/app/src/main/res/layout/item_ketqua.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/ketqua_item.xml" value="0.33" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/layout_dia_forgot.xml" value="0.25" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/layoutketqua.xml" value="0.1" />
@@ -48,12 +53,6 @@
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/thongbao_item.xml" value="0.22" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/tkb_day_item.xml" value="0.3721286370597244" />
         <entry key="..\:/Android/StudentApp/app/src/main/res/layout/tkb_item.xml" value="0.33" />
-        <entry key="..\:/AndroidApp/app/src/main/res/layout/activity_chi_tiet_ketqua.xml" value="0.259375" />
-        <entry key="..\:/AndroidApp/app/src/main/res/layout/dia_personal_infor.xml" value="0.264" />
-        <entry key="..\:/AndroidApp/app/src/main/res/layout/item_chitiet_ketqua.xml" value="0.259375" />
-        <entry key="..\:/AndroidApp/app/src/main/res/layout/item_ketqua.xml" value="0.463768115942029" />
-        <entry key="..\:/Learn/Android/AndroidApp/app/src/main/res/layout/activity_home_page.xml" value="0.264" />
-        <entry key="..\:/Learn/Android/AndroidApp/app/src/main/res/layout/dia_personal_infor.xml" value="0.1793478260869565" />
       </map>
     </option>
   </component>

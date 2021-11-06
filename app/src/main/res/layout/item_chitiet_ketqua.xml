@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_marginTop="10dp"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         app:cardBackgroundColor="#D4F0FF"
         app:cardCornerRadius="20dp"
-        app:cardElevation="5dp">
+        app:cardElevation="5dp"
+        android:layout_marginBottom="16dp">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textviewtenhp"
@@ -41,8 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textviewtenhp"
-                android:layout_toRightOf="@+id/textviewsotinchi"
-                android:text="                  2 "
+                android:layout_alignLeft="@+id/textviewdiemcc"
+                android:text="2"
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/textviewdiemchuyencan"
@@ -58,8 +58,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textviewsotc"
+                android:layout_marginLeft="16dp"
                 android:layout_toRightOf="@+id/textviewdiemchuyencan"
-                android:text="   10.0 "
+                android:text="10.0 "
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/textviewdiemgiuaki"
@@ -75,8 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textviewdiemcc"
-                android:layout_toRightOf="@+id/textviewdiemgiuaki"
-                android:text="             8.0 "
+                android:layout_alignLeft="@+id/textviewdiemcc"
+                android:text="8.0 "
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/textviewdiemcuoiki"
@@ -92,8 +93,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textviewdiemgk"
-                android:layout_toRightOf="@+id/textviewdiemcuoiki"
-                android:text="             8.0 "
+                android:layout_alignLeft="@+id/textviewdiemcc"
+                android:text="8.0 "
                 android:textSize="16sp" />
             <TextView
                 android:id="@+id/textviewdiemtongket"
@@ -109,9 +110,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textviewdiemck"
-                android:layout_toRightOf="@+id/textviewdiemtongket"
-                android:text="          8.0 "
+                android:layout_alignLeft="@+id/textviewdiemcc"
+                android:text="8.0 "
                 android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/textviewdiemchu"
                 android:layout_width="wrap_content"
@@ -126,13 +128,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textviewdiemtk"
-                android:layout_toRightOf="@+id/textviewdiemchu"
+                android:layout_alignLeft="@+id/textviewdiemcc"
                 android:text="   B"
                 android:textSize="16sp" />
-
-
-
-
 
         </RelativeLayout>
 
