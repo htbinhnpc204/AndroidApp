@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    android:background="@drawable/ic_bg_glass">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="25dp"
+            android:onClick="Close"
+            android:src="@drawable/img_close_x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvInfor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN CÁ NHÂN"
+            android:textColor="@color/main_color"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnClose" />
+
+        <TextView
+            android:id="@+id/tvMasv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã sinh viên:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.101"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInfor"
+            app:layout_constraintVertical_bias="0.066" />
+
+        <EditText
+            android:id="@+id/txtMasv"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:background="@color/light_grey"
+            android:paddingLeft="10dp"
+            android:text="1911505310112"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMasv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.305"
+            app:layout_constraintStart_toEndOf="@+id/tvMasv"
+            app:layout_constraintTop_toTopOf="@+id/tvMasv"/>
+
+        <TextView
+            android:id="@+id/tvhoten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Họ và tên:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvMasv"
+            app:layout_constraintTop_toBottomOf="@+id/tvMasv" />
+
+        <EditText
+            android:id="@+id/txthoten"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:background="@color/light_grey"
+            android:paddingLeft="10dp"
+            android:text="HỒ THÁI BÌNH"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/tvhoten"
+            app:layout_constraintEnd_toEndOf="@+id/txtMasv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtMasv"
+            app:layout_constraintTop_toTopOf="@+id/tvhoten"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvcccd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="CMND/CCCD:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvhoten"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvhoten"
+            app:layout_constraintTop_toBottomOf="@+id/tvhoten"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtcccd"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:text="000000000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/tvcccd"
+            app:layout_constraintEnd_toEndOf="@+id/txthoten"
+            app:layout_constraintStart_toStartOf="@+id/txthoten"
+            app:layout_constraintTop_toTopOf="@+id/tvcccd" />
+
+        <TextView
+            android:id="@+id/tvNoisinh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Nơi sinh:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvcccd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvcccd"
+            app:layout_constraintTop_toBottomOf="@+id/tvcccd"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtNoisinh"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:text="tỉnh Quảng Nam"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNoisinh"
+            app:layout_constraintEnd_toEndOf="@+id/txtcccd"
+            app:layout_constraintStart_toStartOf="@+id/txtcccd"
+            app:layout_constraintTop_toTopOf="@+id/tvNoisinh" />
+
+        <TextView
+            android:id="@+id/tvDienthoai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Điện thoại:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvNoisinh"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvNoisinh"
+            app:layout_constraintTop_toBottomOf="@+id/tvNoisinh"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtDienthoai"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:text="0987654321"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDienthoai"
+            app:layout_constraintEnd_toEndOf="@+id/txtNoisinh"
+            app:layout_constraintStart_toStartOf="@+id/txtNoisinh"
+            app:layout_constraintTop_toTopOf="@+id/tvDienthoai" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Email:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvDienthoai"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvDienthoai"
+            app:layout_constraintTop_toBottomOf="@+id/tvDienthoai"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="180dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:text="sinhvienute@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/tvEmail"
+            app:layout_constraintEnd_toEndOf="@+id/txtDienthoai"
+            app:layout_constraintStart_toStartOf="@+id/txtDienthoai"
+            app:layout_constraintTop_toTopOf="@+id/tvEmail" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="250dp"
+            android:layout_height="36dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/ic_btn_bg"
+            android:text="Cập nhật thông tin"
+            android:textColor="@color/white"
+            android:onClick="doUpdate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtEmail"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/tvEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent=".4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
