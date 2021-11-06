@@ -2,18 +2,24 @@ package com.htbinh.studentapp.Fragment;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
 
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.htbinh.studentapp.Adapter.TkbAdapter;
 import com.htbinh.studentapp.Model.TkbModel;
 import com.htbinh.studentapp.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +35,8 @@ public class WeekFragment extends ListFragment {
 
     ArrayList<TkbModel> listTKB;
     TkbAdapter adapter;
+    private List<String> listThu;
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -68,6 +76,17 @@ public class WeekFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+
+
+        listThu = new ArrayList<>();
+        listThu.add("Thứ 2");
+        listThu.add("Thứ 3");
+        listThu.add("Thứ 4");
+        listThu.add("Thứ 5");
+        listThu.add("Thứ 6");
+        listThu.add("Thứ 7");
+        listThu.add("Chủ nhật");
+
         listTKB = new ArrayList<>();
         listTKB.add(new TkbModel("08/11/2021","Lập trình di động 1","7-9","Đỗ Phú Huy","ONLINE"));
         listTKB.add(new TkbModel("09/11/2021","Lập trình di động 2","7-9","Đỗ Phú Huy","ONLINE"));
@@ -78,7 +97,7 @@ public class WeekFragment extends ListFragment {
         listTKB.add(new TkbModel("13/11/2021","Lập trình di động 7","7-9","Đỗ Phú Huy","ONLINE"));
         listTKB.add(new TkbModel("14/11/2021","Lập trình di động 8","7-9","Đỗ Phú Huy","ONLINE"));
 
-        adapter = new TkbAdapter(getActivity(), R.layout.item_tkb_by_week, listTKB);
+        adapter = new TkbAdapter(getActivity(), R.layout.item_tkb_by_week, listTKB, listThu);
         setListAdapter(adapter);
 
         // Inflate the layout for this fragment
