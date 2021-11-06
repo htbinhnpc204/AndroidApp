@@ -2,6 +2,7 @@ package com.htbinh.studentapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -36,5 +37,9 @@ public class KetQuaActivity extends AppCompatActivity {
     }
     public void goBack(View v){
         finish();
+    }
+    public void viewxemthem(View v){
+        Intent in = new Intent(KetQuaActivity.this, ChiTietKetQuaActivity.class);
+        startActivity(in);
     }
 }
