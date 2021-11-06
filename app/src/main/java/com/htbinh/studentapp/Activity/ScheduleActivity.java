@@ -1,11 +1,16 @@
 package com.htbinh.studentapp.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.htbinh.studentapp.Adapter.FragmentAdapter;
@@ -60,7 +65,9 @@ public class ScheduleActivity extends AppCompatActivity {
         });
 
     }
+
     public void goBack(View v){
         finish();
     }
+
 }
