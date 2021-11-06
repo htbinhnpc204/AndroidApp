@@ -43,11 +43,11 @@
     </RelativeLayout>
 
     <ListView
-        android:layout_marginTop="16dp"
         android:id="@+id/listviewthongbao"
-        android:layout_below="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/content"
+        android:layout_marginTop="16dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="10dp" />
 
