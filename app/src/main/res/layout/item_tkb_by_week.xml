@@ -1,66 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/expandable"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="20dp"
+    android:background="#D4F0FF"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="5dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:background="@drawable/ic_bg_card"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:background="#D4F0FF">
 
-        <TextView
-            android:id="@+id/textview_ngay"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NGÀY"
-            android:textColor="@color/main_color"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <TextView
-            android:id="@+id/textview_monhoc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:paddingTop="4dp"
-            android:text="MÔN HỌC"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/textview_ngay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NGÀY"
+                android:textColor="@color/main_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textview_tiet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:paddingTop="4dp"
-            android:text="TIET"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/viewMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="Xem thêm"
+                android:textColor="@android:color/holo_blue_bright" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/textview_gv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:paddingTop="4dp"
-            android:text="GIẢNG VIÊN"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
+        <LinearLayout
+            android:id="@+id/expandArea"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/content"
+            android:background="#D4F0FF"
+            android:visibility="gone">
 
-        <TextView
-            android:id="@+id/textview_phong"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:paddingTop="4dp"
-            android:text="PHÒNG"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-    </LinearLayout>
+            <ListView
+                android:id="@+id/listMonHoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="10dp" />
 
-</RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

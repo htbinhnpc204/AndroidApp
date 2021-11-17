@@ -1,6 +1,8 @@
 package com.htbinh.studentapp.Adapter;
 
 import android.content.Context;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,13 +10,18 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
 
 import com.htbinh.studentapp.R;
 import com.htbinh.studentapp.Model.TkbModel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -24,21 +31,23 @@ public class TkbAdapter extends BaseAdapter {
     private Context context;
     private int layout;
     private List<TkbModel> arraylist;
+    private  List<String> listThu;
 
-    public TkbAdapter(Context context, int layout, List<TkbModel> arraylist) {
+    public TkbAdapter(Context context, int layout, List<TkbModel> arraylist, List<String> listThu) {
         this.context = context;
         this.layout = layout;
         this.arraylist = arraylist;
+        this.listThu = listThu;
     }
 
     @Override
     public int getCount() {
-        return arraylist.size();
+        return listThu.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return null;
+        return listThu.get(i);
     }
 
     @Override
@@ -53,23 +62,48 @@ public class TkbAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
 
         view = inflater.inflate(layout, null);
-        TkbModel LICHHOC = arraylist.get(i);
 
         //ánh xạ
         TextView ngay = view.findViewById(R.id.textview_ngay);
-        TextView monhoc = view.findViewById(R.id.textview_monhoc);
-        TextView tiet = view.findViewById(R.id.textview_tiet);
-        TextView gv = view.findViewById(R.id.textview_gv);
-        TextView phong = view.findViewById(R.id.textview_phong);
+        ListView lv = view.findViewById(R.id.listMonHoc);
+        CardView expandable = view.findViewById(R.id.expandable);
+        LinearLayout area = view.findViewById(R.id.expandArea);
 
-        ngay.setText("Môn: " + LICHHOC.getMonhoc());
-        monhoc.setText(getThu(getDayOfWeek(LICHHOC.getNgay())));
-        tiet.setText("Tiết: " + LICHHOC.getTiet());
-        gv.setText("Giảng viên: " + LICHHOC.getGv());
-        phong.setText("Phòng: " + LICHHOC.getPhong());
+        List<TkbModel> tmp = new ArrayList<>();
+
+        for (TkbModel item:
+             arraylist) {
+            if (getThu(getDayOfWeek(item.getNgay())).equals(listThu.get(i))){
+                tmp.add(item);
+            }
+        }
+
+        ngay.setText(listThu.get(i));
 
         Animation anim = AnimationUtils.loadAnimation(context, R.anim.left_slide);
         view.startAnimation(anim);
+
+        TkbOfDayAdapter adapter = new TkbOfDayAdapter(viewGroup.getContext(), R.layout.item_tkb_by_day, tmp);
+        lv.setAdapter(adapter);
+
+        TextView more = view.findViewById(R.id.viewMore);
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+
+                if(area.getVisibility() == View.GONE){
+                    more.setText("Thu gọn");
+                    TransitionManager.beginDelayedTransition(expandable, new AutoTransition());
+                    area.setVisibility(View.VISIBLE);
+                }else{
+                    more.setText("Xem thêm");
+                    TransitionManager.beginDelayedTransition(expandable, new AutoTransition());
+                    area.setVisibility(View.GONE);
+                }
+            }
+        });
 
         return view;
     }
